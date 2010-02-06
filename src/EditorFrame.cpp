@@ -55,6 +55,7 @@
 #include "EditorBundlePanel.h"
 #include "BundlePane.h"
 #include "UndoHistory.h"
+#include "TaskPane.h"
 #include "DocHistory.h"
 #include "eDocumentPath.h"
 #include "SearchPanel.h"
@@ -118,6 +119,7 @@ BEGIN_EVENT_TABLE(EditorFrame, wxFrame)
 
 	// File menu
 	EVT_MENU(wxID_NEW, EditorFrame::OnMenuNew)
+	EVT_MENU(MENU_TASKPANE, EditorFrame::OnShowTask)
 	EVT_MENU(wxID_OPEN, EditorFrame::OnMenuOpen)
 	EVT_MENU(MENU_DIFF, EditorFrame::OnMenuCompareFiles)
 
@@ -368,6 +370,11 @@ EditorFrame::EditorFrame(CatalystWrapper cat, unsigned int frameId,  const wxStr
 		undoHistory = new UndoHistory(m_catalyst, this, GetId(), this, wxID_ANY);
 		m_frameManager.AddPane(undoHistory, wxAuiPaneInfo().Name(wxT("Undo")).Hide().Right().Caption(_("Undo")).BestSize(wxSize(150,50)));
 
+		// Add the Task Pane
+		taskPane = new TaskPane(m_catalyst, this, GetId(), this, wxID_ANY);
+		taskPane->setEditorFrame(this);
+		m_frameManager.AddPane(taskPane, wxAuiPaneInfo().Name(wxT("Task")).Hide().Right().Caption(_("Task")).BestSize(wxSize(150,50)));
+
 		m_outputPane = new HtmlOutputPane(this, *this);
 		m_frameManager.AddPane(m_outputPane, wxAuiPaneInfo().Name(wxT("Output")).Hide().Bottom().Caption(_("Output")).BestSize(wxSize(150,100)));
 
@@ -606,6 +613,7 @@ void EditorFrame::InitMenus() {
 	viewMenu->Append(MENU_COMMANDOUTPUT, _("&Command Output\tF12"), _("Show Command Output"), wxITEM_CHECK);
 	viewMenu->Check(MENU_COMMANDOUTPUT, false);
 	viewMenu->Append(MENU_PREVIEW, _("Web Pre&view\tCtrl+Alt+P"), _("Show Web Preview"), wxITEM_CHECK);
+	viewMenu->Append(MENU_TASKPANE, _("&Show &Tasks\tCtrl+U"), _("Show Tasks"));
 	viewMenu->AppendSeparator();
 	viewMenu->Append(MENU_LINENUM, _("&Line Numbers"), _("Show Line Numbers"), wxITEM_CHECK);
 	viewMenu->Check(MENU_LINENUM, m_showGutter);
@@ -708,6 +716,39 @@ void EditorFrame::InitMenus() {
 
 	// associate the menu bar with the frame
 	SetMenuBar(menuBar);
+}
+int EditorFrame::GetOpenFilesCount() {
+	return m_tabBar->GetPageCount();
+}
+
+void EditorFrame::OpenFileList(wxString* fileList, int numberOfFiles) {
+	for (int i = 0; i < numberOfFiles; i++) {
+		wxString tmp = _T("");
+		if (fileList[i].Cmp(tmp)) {
+		OpenFile(fileList[i]);
+		}
+
+	}
+	
+
+}
+
+wxString* EditorFrame::GetAllOpenFiles() {
+	const wxString projectPath = GetRootPath().GetFullPath();
+
+	static wxString openFiles[200];
+	wxString path;
+	wxFileName f;
+
+	for (unsigned int i = 0; i < m_tabBar->GetPageCount(); ++i) {
+		EditorCtrl* page = GetEditorCtrlFromPage(i);
+		f = page->GetFilePath();
+		openFiles[i] = f.GetFullPath();
+	}
+	
+	UpdateTabs();
+	
+	return openFiles;
 }
 
 void EditorFrame::RestoreState() {
@@ -2270,6 +2311,10 @@ void EditorFrame::OnMenuBOM(wxCommandEvent& event) {
 	editorCtrl->SetBOM(event.IsChecked());
 }
 
+void EditorFrame::OnShowTask(wxCommandEvent& WXUNUSED(event)) {
+	TogglePane(taskPane,true);
+}
+
 void EditorFrame::OnMenuNew(wxCommandEvent& WXUNUSED(event)) {
 	AddTab();
 }
@@ -2542,6 +2587,26 @@ void EditorFrame::OnMenuClose(wxCommandEvent& WXUNUSED(event)) {
 	const int tab_id = m_tabBar->GetSelection();
 	CloseTab(tab_id);
 }
+
+void EditorFrame::CloseAllTabs() {
+	wxASSERT(m_tabBar->GetPageCount() != 0);
+
+	if (m_tabBar->GetPageCount() == 1 && editorCtrl->IsEmpty()) return;
+
+	if (AskToSaveMulti() == false) return;
+
+	// Delete pages and close the tabs
+	Freeze(); // optimize redrawing
+	for (unsigned int tab_id = m_tabBar->GetPageCount()-1; m_tabBar->GetPageCount() >= 1; --tab_id) {
+		DeletePage(tab_id, true);
+		
+	}
+
+	// Since we deleted all editCtrls, we have to create a new empty one
+	AddTab();
+	Thaw(); // optimize redrawing
+}
+
 
 void EditorFrame::OnMenuCloseWindow(wxCommandEvent& WXUNUSED(event)) {
 	Close();

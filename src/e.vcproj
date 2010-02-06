@@ -1562,6 +1562,22 @@
 			>
 		</File>
 		<File
+			RelativePath=".\TaskManager.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\TaskManager.h"
+			>
+		</File>
+		<File
+			RelativePath=".\TaskPane.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\TaskPane.h"
+			>
+		</File>
+		<File
 			RelativePath="ThemeEditor.cpp"
 			>
 		</File>

@@ -1,0 +1,514 @@
+e caused an Access Violation (0xc0000005) 
+in module e.exe at 001b:00a6c70e.
+
+Exception handler called in WinMain.
+Error occurred at 1/26/2010 10:23:44.
+D:\Projects\etexteditor-e-8f6bad5\src\e-exe\e.exe, run by Administrator.
+Operating system:  Windows XP (5.1.2600).
+2 processor(s), type 586.
+50% memory in use.
+2048 MBytes physical memory.
+1518 MBytes physical memory free.
+0 MBytes paging file.
+3139 MBytes paging file free.
+2048 MBytes user address space.
+1994 MBytes user address space free.
+Read from location 00000000 caused an access violation.
+
+Context:
+EDI:    0x0012f51c  ESI: 0x0012f4d0  EAX:   0x00000000
+EBX:    0x7ffdf000  ECX: 0x00000000  EDX:   0x00000000
+EIP:    0x00a6c70e  EBP: 0x0012f4ac  SegCs: 0x0000001b
+EFlags: 0x00010246  ESP: 0x0012f484  SegSs: 0x00000023
+
+Bytes at CS:EIP:
+83 39 00 75 5a 6a 30 e8 53 5e e1 ff 83 c4 04 89 
+
+Stack:
+0x0012f484: 105e573e 0012f4d0 cccccccc cccccccc >W^.............
+0x0012f494: cccccccc 00000000 02118770 0012f51c ........p.......
+0x0012f4a4: 01088c86 ffffffff 0012f4c0 00a6ccd6 ................
+0x0012f4b4: 00000000 cccccccc 02118770 0012f528 ........p...(...
+0x0012f4c4: 00a4acd2 00000000 0012f510 105e56ba .............V^.
+0x0012f4d4: 0012f5ac 0012f530 cccccccc cccccccc ....0...........
+0x0012f4e4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f4f4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f504: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f514: cccccccc 02118770 0012f5ac 01086226 ....p.......&b..
+0x0012f524: ffffffff 0012f548 00a4f7cc 00000000 ....H...........
+0x0012f534: 0012f584 00000000 0012f55c 00000000 ........\.......
+0x0012f544: 01ad50e8 0012f564 00a49969 00000000 .P..d...i.......
+0x0012f554: 0000003d 0012f584 0012f924 0012f5e4 =.......$.......
+0x0012f564: 0012f5b8 00a50c5d 0012f584 105e562a ....].......*V^.
+0x0012f574: 0012f654 0012f924 00000000 cccccccc T...$...........
+0x0012f584: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f594: 00000000 00000000 cccccc00 cccccccc ................
+0x0012f5a4: cccccccc 0012f5e4 0012f654 01086a64 ........T...dj..
+0x0012f5b4: 00000001 0012f660 00bacec4 0012f5e0 ....`...........
+0x0012f5c4: 105e55f2 0012f6c0 00000000 cccccccc .U^.............
+0x0012f5d4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f5e4: 01ad50e8 00000000 01421cf8 01ad50e8 .P........B..P..
+0x0012f5f4: 01a52c70 00000556 01421bd0 cccccccc p,..V.....B.....
+0x0012f604: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f614: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f624: cccccccc 01ad50e8 00000000 cccccccc .....P..........
+0x0012f634: cccccccc 01ad50e8 cccccccc cccccccc .....P..........
+0x0012f644: 01a52c70 00000556 cccccccc 01a53de8 p,..V........=..
+0x0012f654: 0012f6c0 010a468a 00000003 0012f6cc .....F..........
+0x0012f664: 00babf21 0012f880 00000556 105e555e !.......V...^U^.
+0x0012f674: 0012f76c 00000000 02140450 00000000 l.......P.......
+0x0012f684: 01421d18 cccccccc cccccccc cccccccc ..B.............
+0x0012f694: 02140450 00000000 01421b8c 00000556 P.........B.V...
+0x0012f6a4: cccccccc 00000010 cccccccc 02140450 ............P...
+0x0012f6b4: 00000000 cccccccc 01a53de8 0012f76c .........=..l...
+0x0012f6c4: 010a44de 00000001 0012f778 00ba6466 .D......x...fd..
+0x0012f6d4: 0012f880 00000000 02140450 105e54ea ........P....T^.
+0x0012f6e4: 0012f89c cccccccc 0012f6dc 00000004 ................
+0x0012f6f4: 00000000 0012f6dc 02140450 01a53f98 ........P....?..
+0x0012f704: 00000000 01421ca0 cccccccc cccccccc ......B.........
+0x0012f714: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f724: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f734: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f744: cccccccc cccccccc cccccccc 02140450 ............P...
+0x0012f754: cccccccc cccccccc 01a53f98 00000000 .........?......
+0x0012f764: cccccccc 01a53de8 0012f89c 010a3a99 .....=.......:..
+0x0012f774: 00000001 0012f8a8 00adbd49 0012f880 ........I.......
+0x0012f784: 00000006 00000000 00000000 105e5b3a ............:[^.
+0x0012f794: 0012f90c cccccccc cccccccc cccccccc ................
+0x0012f7a4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f7b4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f7c4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f7d4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f7e4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f7f4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f804: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f814: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f824: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f834: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f844: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f854: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f864: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f874: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f884: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f894: cccccccc 02140028 0012f90c 01093238 ....(.......82..
+0x0012f8a4: ffffffff 0012f918 00ad95ce 00000000 ................
+0x0012f8b4: 00000000 105e5a8a 0012fa3c cccccccc .....Z^.<.......
+0x0012f8c4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012f8d4: cccccccc cccccccc 00000000 00000000 ................
+0x0012f8e4: cccccccc 00000000 cccccccc 01ad5478 ............xT..
+0x0012f8f4: 01ad547c 01ad547c cccccccc 00000000 |T..|T..........
+0x0012f904: 00000000 02140028 0012fa3c 01092d9d ....(...<....-..
+0x0012f914: 00000000 0012fa48 00ad817a 021402a8 ....H...z.......
+0x0012f924: 105e59da 0012fc04 0012fa58 01acc9c0 .Y^.....X.......
+0x0012f934: 0012f984 0012f984 0012f998 0012f998 ................
+0x0012f944: cccccccc cccccccc 0012f9b8 0012f9b8 ................
+0x0012f954: 0012f9cc 0012f9cc 0012f9e0 0012f9e0 ................
+0x0012f964: 0012f9f4 0012f9f4 0012fa08 0012fa08 ................
+0x0012f974: 020f51c4 01188f18 01acc9c0 01acc9c0 .Q..............
+0x0012f984: 00000000 cccccccc 00000000 00000000 ................
+0x0012f994: 00000000 0223de68 0223de74 01cccccc ....h.#.t.#.....
+0x0012f9a4: cccccccc cccccccc cccccccc 01a3e04c ............L...
+0x0012f9b4: 01cccccc 01188ef4 00000000 02ffc0c0 ................
+0x0012f9c4: c0ffc001 ccccccff 01188ef4 00000000 ................
+0x0012f9d4: 0200ffff ff00ff01 ccccccff 01188ef4 ................
+0x0012f9e4: 00000000 02707070 70707001 ccccccff ....ppp..ppp....
+0x0012f9f4: 01188ef4 00000000 02e1e1e1 e1e1e101 ................
+0x0012fa04: ccccccff 01188ef4 00000000 02debb8a ................
+0x0012fa14: bbde8a01 ccccccff cccccccc 01a3e63c ............<...
+0x0012fa24: cccccccc 01a2a484 cccccccc 01a47cfc .............|..
+0x0012fa34: cccccccc 02140028 0012fc04 01092a68 ....(.......h*..
+0x0012fa44: 00000024 0012fc10 00a8e481 01a32e38 $...........8...
+0x0012fa54: 01a53de8 00000001 105e5f82 0012fcf0 .=......._^.....
+0x0012fa64: 0012fc18 cccccccc cccccccc cccccccc ................
+0x0012fa74: 01a53de8 01a2a458 01a3d590 01a32d00 .=..X........-..
+0x0012fa84: 0012fb18 0012fb18 01a32b30 01a32980 ........0+...)..
+0x0012fa94: 01a327d0 01a07480 01a322e0 01a07448 .'...t..."..Ht..
+0x0012faa4: 01a070c8 0012fb5c 0012fb5c 0012fb64 .p..\...\...d...
+0x0012fab4: 0012fb64 0012fb68 0012fb68 0012fb6c d...h...h...l...
+0x0012fac4: 0012fb6c 0012fb70 0012fb70 0012fb74 l...p...p...t...
+0x0012fad4: 0012fb74 01a07320 0012fb88 0012fb88 t... s..........
+0x0012fae4: 00000000 cccccccc cccccccc cccccccc ................
+0x0012faf4: cccccccc 02140028 cccccccc 01a53de8 ....(........=..
+0x0012fb04: 01a53de8 01a2a458 cccccccc 01a3d590 .=..X...........
+0x0012fb14: 01a3d590 01a32d64 01a32d00 01a32d00 ....d-...-...-..
+0x0012fb24: 01a32b30 01a32b30 01a32980 01a32980 0+..0+...)...)..
+0x0012fb34: 01a327d0 01a327d0 01a07480 01a07480 .'...'...t...t..
+0x0012fb44: 01a07448 01a07448 01a322e0 01a322e0 Ht..Ht..."..."..
+0x0012fb54: 01a070c8 01a070c8 01a06cec 01cccccc .p...p...l......
+0x0012fb64: 01a06c0c 01a06fd4 01a074f4 01a07454 .l...o...t..Tt..
+0x0012fb74: 01a3277c cccccccc 01188f18 01a07320 |'.......... s..
+0x0012fb84: 01a07320 01a3277c 01a072cc cccccccc  s..|'...r......
+0x0012fb94: cccccccc cccccccc 01a2a458 013ed470 ........X...p.>.
+0x0012fba4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fbb4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fbc4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fbd4: 00000001 cccccccc 01cccccc cccccccc ................
+0x0012fbe4: 00000000 cccccccc 01188f18 cccccccc ................
+0x0012fbf4: cccccccc 01a3226c cccccccc 01a2a3d8 ....l"..........
+0x0012fc04: 0012fd44 0108ba15 0000001d 0012fcf0 D...............
+0x0012fc14: 008a2352 0012fef4 046cda84 7ffdf000 R#........l.....
+0x0012fc24: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc34: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc44: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc54: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc64: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc74: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc84: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fc94: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fca4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fcb4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fcc4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fcd4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fce4: cccccccc 01a2a3d8 cccccccc 0012fd50 ............P...
+0x0012fcf4: 00920f41 105e5ec2 0012fef4 046cda84 A....^^.......l.
+0x0012fd04: 7ffdf000 102cffe3 00000064 0012fef4 ......,.d.......
+0x0012fd14: 102cfffe 0012fd28 01a2a3d8 01a2a3d8 ..,.(...........
+0x0012fd24: 7c8097d0 0012fd3c 1023e780 00000000 ...|<.....#.....
+0x0012fd34: 003a1eb0 00000000 0012fd48 0012fcf8 ..:.....H.......
+0x0012fd44: 0012fd7c 0106d89f 00000001 0012fd8c |...............
+0x0012fd54: 009091f5 0012fdf0 01a16668 105e5e1e ........hf...^^.
+0x0012fd64: 0012fef4 046cda84 7ffdf000 0012fdcc ......l.........
+0x0012fd74: 0012fd60 0012f088 0012fdf4 00870a70 `...........p...
+0x0012fd84: 117e52e2 00000000 0012fe00 0092d16f .R~.........o...
+0x0012fd94: 0012fdf0 01a16668 105e5d92 0012fdb0 ....hf...]^.....
+0x0012fda4: 0012fdb0 00000018 01a16668 00000010 ........hf......
+0x0012fdb4: 00000001 00000000 01a2a100 00000001 ................
+0x0012fdc4: 000209f8 01a16668 0012fe00 0092d1f0 ....hf..........
+0x0012fdd4: 00000001 01a16668 0012fdcc 00000010 ....hf..........
+0x0012fde4: 00000001 01a2a2d8 01a25f00 00000001 ........._......
+0x0012fdf4: 0012fefc 0106e7f8 00000002 0012ff0c ................
+0x0012fe04: 008a1e2b 00400000 00000000 00152344 +.....@.....D#..
+0x0012fe14: 00000001 105e5c9e 80000001 046cda84 .....\^.......l.
+0x0012fe24: 7ffdf000 cccccccc cccccccc cccccccc ................
+0x0012fe34: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe44: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe54: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe64: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe74: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe84: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fe94: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fea4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012feb4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fec4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fed4: cccccccc cccccccc cccccccc cccccccc ................
+0x0012fee4: cccccccc cccccccc ffffffff cccccccc ................
+0x0012fef4: 0012fe18 0012f088 0012ffa8 00870a70 ............p...
+0x0012ff04: 117ed792 00000000 0012ffb8 00e56fc8 ..~..........o..
+0x0012ff14: 00400000 00000000 00152344 00000001 ..@.....D#......
+0x0012ff24: 105e5c2a 80000001 046cda84 7ffdf000 *\^.......l.....
+0x0012ff34: 00000001 8064381a 88270378 897004f0 .....8d.x.'...p.
+0x0012ff44: 00000000 00130000 00000000 00000000 ................
+0x0012ff54: 00152344 00000044 00153eb0 00154118 D#..D....>...A..
+0x0012ff64: 00154130 00000000 00000000 00000000 0A..............
+0x0012ff74: 00000000 00000000 00000000 00000000 ................
+0x0012ff84: 00000401 00000001 00000000 00000000 ................
+0x0012ff94: 000404c3 00000000 0012ffa0 0012ff24 ............$...
+0x0012ffa4: 000350b5 0012ffe0 00870a70 11750a12 .P......p.....u.
+0x0012ffb4: 00000001 0012ffc0 00e56d2f 0012fff0 ......../m......
+0x0012ffc4: 7c817067 80000001 046cda84 7ffdf000 gp.|......l.....
+0x0012ffd4: 8054b6ed 0012ffc8 897004f0 ffffffff ..T.......p.....
+0x0012ffe4: 7c839ac0 7c817070 00000000 00000000 ...|pp.|........
+0x0012fff4: 00000000 00891b03 00000000          ............
+
+Module 1
+D:\Projects\etexteditor-e-8f6bad5\src\e-exe\e.exe
+Image Base: 0x00400000  Image Size: 0x01119000
+Checksum:   0x00000000  Time Stamp: 0x4b5f08ec
+File Size:  13036544    File Time:  1/26/2010 10:23:30
+Version Information:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 2
+C:\WINDOWS.0\WinSxS\x86_Microsoft.VC90.DebugCRT_1fc8b3b9a1e18e3b_9.0.30729.1_x-ww_f863c71f\MSVCR90D.dll
+Image Base: 0x10200000  Image Size: 0x00123000
+Checksum:   0x00123d7e  Time Stamp: 0x488ef6c7
+File Size:  1180672     File Time:  7/29/2008 09:05:08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Visual Studio® 2008
+   FileDesc:   Microsoft® C Runtime Library
+   FileVer:    9.0.30729.1
+   ProdVer:    9.0.30729.1
+
+Module 3
+C:\WINDOWS.0\WinSxS\x86_Microsoft.VC90.DebugCRT_1fc8b3b9a1e18e3b_9.0.30729.1_x-ww_f863c71f\MSVCP90D.dll
+Image Base: 0x10480000  Image Size: 0x000d7000
+Checksum:   0x000ddac6  Time Stamp: 0x488ef6cb
+File Size:  875520      File Time:  7/29/2008 09:05:08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Visual Studio® 2008
+   FileDesc:   Microsoft® C++ Runtime Library
+   FileVer:    9.0.30729.1
+   ProdVer:    9.0.30729.1
+
+Module 4
+C:\WINDOWS.0\system32\dbghelp.dll
+Image Base: 0x59a60000  Image Size: 0x000a1000
+Checksum:   0x000ab3a7  Time Stamp: 0x4802a0b2
+File Size:  640000      File Time:  4/13/2008 22:41:52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows Image Helper
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 5
+C:\WINDOWS.0\system32\uxtheme.dll
+Image Base: 0x5ad70000  Image Size: 0x00038000
+Checksum:   0x000445bd  Time Stamp: 0x4802a11e
+File Size:  218624      File Time:  9/13/2008 17:22:30
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Microsoft UxTheme Library
+   FileVer:    6.0.2900.5512
+   ProdVer:    6.0.2900.5512
+
+Module 6
+C:\WINDOWS.0\system32\WS2HELP.dll
+Image Base: 0x71aa0000  Image Size: 0x00008000
+Checksum:   0x0000925f  Time Stamp: 0x4802a164
+File Size:  19968       File Time:  4/13/2008 22:42:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows Socket 2.0 Helper for Windows NT
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 7
+C:\WINDOWS.0\system32\WS2_32.dll
+Image Base: 0x71ab0000  Image Size: 0x00017000
+Checksum:   0x0001f020  Time Stamp: 0x4802a163
+File Size:  82432       File Time:  4/13/2008 22:42:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows Socket 2.0 32-Bit DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 8
+C:\WINDOWS.0\system32\WSOCK32.dll
+Image Base: 0x71ad0000  Image Size: 0x00009000
+Checksum:   0x00013ba7  Time Stamp: 0x4802a170
+File Size:  22528       File Time:  4/13/2008 22:42:12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows Socket 32-Bit DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 9
+C:\WINDOWS.0\system32\MSCTF.dll
+Image Base: 0x74720000  Image Size: 0x0004c000
+Checksum:   0x000492ef  Time Stamp: 0x4802a12c
+File Size:  297984      File Time:  4/13/2008 22:42:00
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   MSCTF Server DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 10
+C:\WINDOWS.0\system32\IMM32.DLL
+Image Base: 0x76390000  Image Size: 0x0001d000
+Checksum:   0x0002921b  Time Stamp: 0x4802a0e7
+File Size:  110080      File Time:  4/13/2008 22:41:56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows XP IMM32 API Client DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 11
+C:\WINDOWS.0\system32\COMDLG32.dll
+Image Base: 0x763b0000  Image Size: 0x00049000
+Checksum:   0x0004edb8  Time Stamp: 0x4802a0c9
+File Size:  276992      File Time:  4/13/2008 22:41:52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Common Dialogs DLL
+   FileVer:    6.0.2900.5512
+   ProdVer:    6.0.2900.5512
+
+Module 12
+C:\WINDOWS.0\system32\OLEAUT32.dll
+Image Base: 0x77120000  Image Size: 0x0008b000
+Checksum:   0x0008d4e3  Time Stamp: 0x4802a112
+File Size:  551936      File Time:  4/13/2008 22:42:04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    
+   FileDesc:   
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 13
+C:\WINDOWS.0\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\COMCTL32.dll
+Image Base: 0x773d0000  Image Size: 0x00103000
+Checksum:   0x0010324b  Time Stamp: 0x4802a094
+File Size:  1054208     File Time:  4/13/2008 22:42:52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   User Experience Controls Library
+   FileVer:    6.0.2900.5512
+   ProdVer:    6.0.2900.5512
+
+Module 14
+C:\WINDOWS.0\system32\ole32.dll
+Image Base: 0x774e0000  Image Size: 0x0013d000
+Checksum:   0x0014744b  Time Stamp: 0x4802a111
+File Size:  1287168     File Time:  4/13/2008 22:42:04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Microsoft OLE for Windows
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 15
+C:\WINDOWS.0\system32\VERSION.dll
+Image Base: 0x77c00000  Image Size: 0x00008000
+Checksum:   0x00012c70  Time Stamp: 0x4802a11d
+File Size:  18944       File Time:  4/13/2008 22:42:10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Version Checking and File Installation Libraries
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 16
+C:\WINDOWS.0\system32\msvcrt.dll
+Image Base: 0x77c10000  Image Size: 0x00058000
+Checksum:   0x00057341  Time Stamp: 0x4802a188
+File Size:  343040      File Time:  4/13/2008 22:42:02
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows NT CRT DLL
+   FileVer:    7.0.2600.5512
+   ProdVer:    6.1.8638.5512
+
+Module 17
+C:\WINDOWS.0\system32\ADVAPI32.dll
+Image Base: 0x77dd0000  Image Size: 0x0009b000
+Checksum:   0x0009b625  Time Stamp: 0x4802a0b2
+File Size:  617472      File Time:  4/13/2008 22:41:50
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Advanced Windows 32 Base API
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 18
+C:\WINDOWS.0\system32\RPCRT4.dll
+Image Base: 0x77e70000  Image Size: 0x00092000
+Checksum:   0x00091932  Time Stamp: 0x4802a106
+File Size:  584704      File Time:  4/13/2008 22:42:06
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Remote Procedure Call Runtime
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 19
+C:\WINDOWS.0\system32\GDI32.dll
+Image Base: 0x77f10000  Image Size: 0x00049000
+Checksum:   0x000472ff  Time Stamp: 0x4802a0be
+File Size:  285184      File Time:  4/13/2008 22:41:56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   GDI Client DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 20
+C:\WINDOWS.0\system32\SHLWAPI.dll
+Image Base: 0x77f60000  Image Size: 0x00076000
+Checksum:   0x0008329f  Time Stamp: 0x4802a116
+File Size:  474112      File Time:  4/13/2008 22:42:06
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Shell Light-weight Utility Library
+   FileVer:    6.0.2900.5512
+   ProdVer:    6.0.2900.5512
+
+Module 21
+C:\WINDOWS.0\system32\Secur32.dll
+Image Base: 0x77fe0000  Image Size: 0x00011000
+Checksum:   0x000117db  Time Stamp: 0x4802a11b
+File Size:  56320       File Time:  4/13/2008 22:42:06
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Security Support Provider Interface
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 22
+C:\WINDOWS.0\system32\kernel32.dll
+Image Base: 0x7c800000  Image Size: 0x000f6000
+Checksum:   0x000f44a2  Time Stamp: 0x4802a12c
+File Size:  989696      File Time:  4/13/2008 22:41:58
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows NT BASE API Client DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 23
+C:\WINDOWS.0\system32\ntdll.dll
+Image Base: 0x7c900000  Image Size: 0x000af000
+Checksum:   0x000b62bc  Time Stamp: 0x4802a12c
+File Size:  706048      File Time:  4/13/2008 22:41:26
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   NT Layer DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+Module 24
+C:\WINDOWS.0\system32\SHELL32.dll
+Image Base: 0x7c9c0000  Image Size: 0x00817000
+Checksum:   0x0081ad5d  Time Stamp: 0x4802a111
+File Size:  8461312     File Time:  4/13/2008 22:42:06
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows Shell Common Dll
+   FileVer:    6.0.2900.5512
+   ProdVer:    6.0.2900.5512
+
+Module 25
+C:\WINDOWS.0\system32\USER32.dll
+Image Base: 0x7e410000  Image Size: 0x00091000
+Checksum:   0x0008fc76  Time Stamp: 0x4802a11b
+File Size:  578560      File Time:  4/13/2008 22:42:10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft® Windows® Operating System
+   FileDesc:   Windows XP USER API Client DLL
+   FileVer:    5.1.2600.5512
+   ProdVer:    5.1.2600.5512
+
+
+===== [end of ERRORLOG.TXT] =====

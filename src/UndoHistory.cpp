@@ -35,6 +35,7 @@ BEGIN_EVENT_TABLE(UndoHistory, wxControl)
 	EVT_VERSIONTREE_TOOLTIP(CTRL_VERSIONTREE, UndoHistory::OnVersionTreeTooltip)
 	EVT_VERSIONTREE_DRAWITEM(CTRL_VERSIONTREE, UndoHistory::OnVersionTreeDrawitem)
 	EVT_MENU(MENU_DIFF_TO_CURRENT, UndoHistory::OnMenuDiffToCurrent)
+
 END_EVENT_TABLE()
 
 UndoHistory::UndoHistory(CatalystWrapper& cw, IFrameUndoPane* parentFrame, int win_id, wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size):

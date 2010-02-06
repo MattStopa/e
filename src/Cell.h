@@ -19,7 +19,7 @@
 #include "Document.h"
 
 #include <vector>
-
+;
 // pre-declare
 class CellRegion;
 

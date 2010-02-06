@@ -37,7 +37,6 @@
 #include "IOpenTextmateURL.h"
 #include "ITabPage.h"
 
-
 class EditorCtrl;
 struct EditorChangeState;
 class ProjectPane;
@@ -59,6 +58,7 @@ class DiffDirPane;
 class DiffPanel;
 class IEditorSearch;
 class RemoteThread;
+class TaskPane;
 
 
 class EditorFrame : public KeyHookable<wxFrame>,
@@ -71,6 +71,7 @@ class EditorFrame : public KeyHookable<wxFrame>,
 public:
 	enum FrameMenu {
 		MENU_NEWWINDOW,
+		MENU_TASKPANE,
 		MENU_CLOSEWINDOW,
 		MENU_DIFF,
 		MENU_OPENPROJECT,
@@ -187,11 +188,17 @@ public:
 	void UpdateNotebook();
 
 	// Editor
+	wxString* GetAllOpenFiles();
+	int GetOpenFilesCount() ;
+	void EditorFrame::OpenFileList(wxString* fileList, int numberOfFiles);
+
+
 	void OpenDocument(const doc_id& di);
 	void UpdateWindowTitle();
 	void UpdateTabs();
 	void GotoPos(int line, int column);
 	bool CloseTab(unsigned int tab_id, bool removetab=true);
+	void CloseAllTabs();
 	EditorCtrl* GetEditorCtrl();
 	virtual IEditorSearch* GetSearch();
 
@@ -334,9 +341,10 @@ private:
 	void OnShiftProjectFocus(wxCommandEvent& event);
 
 	void OnOpeningMenu(wxMenuEvent& event);
-
+	void OnShowTask(wxCommandEvent& event);
 	void OnMenuNew(wxCommandEvent& event);
 	void OnMenuNewWindow(wxCommandEvent& event);
+	void OnMenuShowTask(wxCommandEvent& event);
 	void OnMenuOpen(wxCommandEvent& event);
 	void OnMenuCompareFiles(wxCommandEvent& event);
 	void OnMenuOpenProject(wxCommandEvent& event);
@@ -512,6 +520,7 @@ private:
 	// wxAUI and Panes
 	wxAuiManager m_frameManager;
 	UndoHistory* undoHistory;
+	TaskPane* taskPane;
 	DocHistory* documentHistory;
 	//Incomming* incommingPane;
 	HtmlOutputPane* m_outputPane;
